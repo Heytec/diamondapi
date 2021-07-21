@@ -11,7 +11,11 @@ app = FastAPI()
 # loading the trained model diamond-pipeline from your disk (Your script must be in the same folder as the file).
 model = load_model('diamond-pipeline')
 
+@app.get('/')
 
+def index():
+
+    return {'message': "This is the home page of this Diamond API. Go to /docs"}
 
 
 # Define predict function
